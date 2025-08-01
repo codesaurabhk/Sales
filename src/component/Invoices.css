@@ -190,17 +190,17 @@
     text-transform: capitalize;
 }
 
-.status.approved {
+.status.paid {
     background-color: #DFFFE0;
     color: #1E4921;
     
 }
 
-.status.rejected{
+.status.overdue{
     background-color: #FCE4E6;
     color: #491E1F;
 }
-.status.open{
+.status.pending{
     background-color: #FDFFE4;
     color: #636D1D;
 }

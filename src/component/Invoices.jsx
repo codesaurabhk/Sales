@@ -1,5 +1,5 @@
 import React from 'react';
-import './Quotation.css';
+import './Invoices.css';
 import { FaSackDollar } from "react-icons/fa6";
 import { RiAlertFill } from "react-icons/ri";
 import { FaStopCircle } from "react-icons/fa";
@@ -12,23 +12,23 @@ import { useState } from 'react';
 import { BsThreeDots } from "react-icons/bs";
 
 
-const Quotation = () => {
+const Invoices = () => {
     const [currentPage, setCurrentPage] = useState(1);
 const itemsPerPage = 10; 
 
     const data = [
-  { customer: 'ABC Chair Factory', date: '01 Jan', expiryDate: '01 Jan', status: 'Open', amount: '₹17,470.00' },
-  { customer: 'Luxe Seating Co.', date: '02 Jan', expiryDate: '02 Jan', status: 'Open', amount: '₹4,470.00' },
-  { customer: 'Comfort Craft Chairs', date: '03 Jan', expiryDate: '03 Jan', status: 'Approved', amount: '₹17,470.00' },
-  { customer: 'Elite Chair Makers', date: '04 Jan', expiryDate: '04 Jan', status: 'Approved', amount: '₹72,830.00' },
-  { customer: 'Chic Seating Solutions', date: '05 Jan', expiryDate: '05 Jan', status: 'Open', amount: '₹17,470.00' },
-  { customer: 'Premier Chair Designs', date: '06 Jan', expiryDate: '06 Jan', status: 'Rejected', amount: '₹12,030.00' },
-  { customer: 'Stylish Seating Inc.', date: '07 Jan', expiryDate: '07 Jan', status: 'Open', amount: '₹17,470.00' },
-  { customer: 'Innovative Chair Works', date: '08 Jan', expiryDate: '08 Jan', status: 'Open', amount: '₹17,470.00' },
-  { customer: 'Signature Seating Co.', date: '09 Jan', expiryDate: '09 Jan', status: 'Rejected', amount: '₹76,400.00' },
-  { customer: 'Artisan Chair Studio', date: '10 Jan', expiryDate: '10 Jan', status: 'Rejected', amount: '₹17,470.00' },
-  { customer: 'Quality Chair Creations', date: '11 Jan', expiryDate: '11 Jan', status: 'Open', amount: '₹72,830.00' },
-  { customer: 'Modern Chair Collective', date: '12 Jan', expiryDate: '12 Jan', status: 'Rejected', amount: '₹94,470.00' }
+  { customer: 'ABC Chair Factory', date: '01 Jan',  status: 'Pending', amount: '₹17,470.00' },
+  { customer: 'Luxe Seating Co.', date: '02 Jan',  status: 'Pending', amount: '₹4,470.00' },
+  { customer: 'Comfort Craft Chairs', date: '03 Jan',  status: 'Paid', amount: '₹17,470.00' },
+  { customer: 'Elite Chair Makers', date: '04 Jan',  status: 'Paid', amount: '₹72,830.00' },
+  { customer: 'Chic Seating Solutions', date: '05 Jan',  status: 'Paid', amount: '₹17,470.00' },
+  { customer: 'Premier Chair Designs', date: '06 Jan',  status: 'Overdue', amount: '₹12,030.00' },
+  { customer: 'Stylish Seating Inc.', date: '07 Jan',  status: 'paid', amount: '₹17,470.00' },
+  { customer: 'Innovative Chair Works', date: '08 Jan',  status: 'paid', amount: '₹17,470.00' },
+  { customer: 'Signature Seating Co.', date: '09 Jan',  status: 'Overdue', amount: '₹76,400.00' },
+  { customer: 'Artisan Chair Studio', date: '10 Jan',  status: 'Overdue', amount: '₹17,470.00' },
+  { customer: 'Quality Chair Creations', date: '11 Jan',  status: 'paid', amount: '₹72,830.00' },
+  { customer: 'Modern Chair Collective', date: '12 Jan',  status: 'Overdue', amount: '₹94,470.00' }
 ];
 
 
@@ -47,31 +47,31 @@ const paginatedData = data.slice(startIndex, endIndex);
                     <div className="metric-card" style={{ borderTopLeftRadius: "10px", borderEndStartRadius: "10px" }}>
                         <div className="metric-icon"><FaSackDollar /></div>
                         <div>
-                            <p className="metric-title">Total Quotations</p>
+                            <p className="metric-title">Total Invoices</p>
                             <h2>
-                                12
+                                120
                             </h2>
                         </div>
                     </div>
                     <div className="metric-card" >
                         <div className="metric-icon blue"><FaStopCircle /></div>
                         <div>
-                            <p className="metric-title">Open</p>
-                            <h2>6</h2>
+                            <p className="metric-title">paid</p>
+                            <h2>47</h2>
                         </div>
                     </div>
                     <div className="metric-card" >
                         <div className="metric-icon blue"><FaStopCircle /></div>
                         <div>
-                            <p className="metric-title">Approved</p>
-                            <h2>2</h2>
+                            <p className="metric-title">Pending</p>
+                            <h2>32</h2>
                         </div>
                     </div>
                     <div className="metric-card" style={{ borderTopRightRadius: "10px", borderBottomRightRadius: "10px" }}>
                         <div className="metric-icon blue"><RiAlertFill /></div>
                         <div>
-                            <p className="metric-title">Rejected</p>
-                            <h2>4</h2>
+                            <p className="metric-title">Overdue</p>
+                            <h2>41</h2>
                         </div>
                     </div>
                     
@@ -82,11 +82,11 @@ const paginatedData = data.slice(startIndex, endIndex);
                 <div >
                     <div className='toolbars' >
                         <div >
-                            <h3>Quotations</h3>
+                            <h3>All Invoices</h3>
                         </div>
                         <div className="toolbar-actions">
                            
-                            <button className="btn btn-primary">+ Create Quotation</button>
+                            <button className="btn btn-primary">+ Create Invoice</button>
                         </div>
                     </div>
 
@@ -114,8 +114,7 @@ const paginatedData = data.slice(startIndex, endIndex);
                             <tr style={{ color: "#676767" }}>
                                 <th><input type="checkbox" /></th>
                                 <th>Customer</th>
-                                <th>Date</th>
-                                <th>Expiry date</th>
+                                <th>Due Date</th>
                                 <th>Status</th>
                                 <th>Amount</th>
                                 <th></th>
@@ -130,7 +129,6 @@ const paginatedData = data.slice(startIndex, endIndex);
                                         {sales.customer}
                                     </td>
                                     <td>{sales.date} </td>
-                                    <td>{sales.expiryDate}</td>
                                     <td><span className={`status ${sales.status.toLowerCase()}`}>{sales.status}</span></td>
                                     <td>{sales.amount}</td>
                                     <td><BsThreeDots /></td>
@@ -168,4 +166,4 @@ const paginatedData = data.slice(startIndex, endIndex);
     );
 };
 
-export default Quotation;
+export default Invoices;

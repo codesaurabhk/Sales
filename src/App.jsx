@@ -1,4 +1,5 @@
 import './App.css'
+import Invoices from './component/Invoices'
 import SalesRecord from './component/Quotation'
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <>
-      <SalesRecord/>
+      {/* <SalesRecord/> */}
+      <Invoices/>
     </>
   )
 }
