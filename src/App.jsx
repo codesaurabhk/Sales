@@ -1,14 +1,17 @@
 import './App.css'
 import Invoices from './component/Invoices'
-import SalesRecord from './component/Quotation'
+import Quotation from './component/Quotation'
+import SalesRecord from './component/SalesRecord'
+
 
 function App() {
   
 
   return (
     <>
-      {/* <SalesRecord/> */}
-      <Invoices/>
+      <SalesRecord/>
+      {/* <Invoices/> */}
+      {/* <Quotation/> */}
     </>
   )
 }
