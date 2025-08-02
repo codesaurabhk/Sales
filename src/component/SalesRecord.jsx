@@ -7,6 +7,7 @@ import { FaAngleLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa";
 import { useState } from "react";
 import { BsThreeDots } from "react-icons/bs";
+import { FaPlus } from "react-icons/fa6";
 
 import chair from "../images/chair.jpg";
 import tshirt from "../images/tshirts.jpg";
@@ -25,87 +26,83 @@ const SalesRecord = () => {
 
   const data = [
     {
-      customer: "ABC Chair Factory",
-      date: "01 Jan",
-      status: "Pending",
-      amount: "₹17,470.00",
+      soldItems: "Chair",
+      customer: "Mohan Kumar",
+      total: "Office Chair",
+      status: "Complete",
+      amount: "---",
       image: chair,
     },
     {
-      customer: "Luxe Seating Co.",
-      date: "02 Jan",
-      status: "Pending",
-      amount: "₹4,470.00",
+      soldItems: "T-Shirt",
+      customer: "Sohan Kumar",
+      total: "T-Shirt",
+      status: "Due",
+      amount: "₹1470.00",
       image: tshirt,
     },
     {
-      customer: "Comfort Craft Chairs",
-      date: "03 Jan",
-      status: "Paid",
-      amount: "₹17,470.00",
+      soldItems: "Wheel Chair",
+      customer: "Ram Prashad",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: wheelchair,
     },
     {
-      customer: "Elite Chair Makers",
-      date: "04 Jan",
-      status: "Paid",
-      amount: "₹72,830.00",
+      soldItems: "Strawberry",
+      customer: "Rajkumar Singh",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: cheery,
     },
     {
-      customer: "Chic Seating Solutions",
-      date: "05 Jan",
-      status: "Paid",
-      amount: "₹17,470.00",
+      soldItems: "T-Shirt - Label MN",
+      customer: "Mohit Pandey",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: tshirts2,
     },
     {
-      customer: "Premier Chair Designs",
-      date: "06 Jan",
-      status: "Overdue",
-      amount: "₹12,030.00",
+      soldItems: "Gaming Chair",
+      customer: "Rohit Kumar",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: chair3,
     },
     {
-      customer: "Stylish Seating Inc.",
-      date: "07 Jan",
-      status: "paid",
-      amount: "₹17,470.00",
+      soldItems: "Luxury Bag",
+      customer: "Pandey ji",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: bag,
     },
     {
-      customer: "Innovative Chair Works",
-      date: "08 Jan",
-      status: "paid",
-      amount: "₹17,470.00",
+      soldItems: "Purple T-Shirt",
+      customer: "Ram",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: tshirts3,
     },
     {
-      customer: "Signature Seating Co.",
-      date: "09 Jan",
-      status: "Overdue",
-      amount: "₹76,400.00",
-      image: tshirts3,
-    },
-    {
-      customer: "Artisan Chair Studio",
-      date: "10 Jan",
-      status: "Overdue",
-      amount: "₹17,470.00",
-      image: tshirts3,
-    },
-    {
-      customer: "Quality Chair Creations",
-      date: "11 Jan",
-      status: "paid",
-      amount: "₹72,830.00",
+      soldItems: "Sofa",
+      customer: "Shyam",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: sofa,
     },
     {
-      customer: "Modern Chair Collective",
-      date: "12 Jan",
-      status: "Overdue",
-      amount: "₹94,470.00",
+      soldItems: "Gaming Mouse",
+      customer: "Bablu",
+      total: "T-Shirt",
+      status: "Complete",
+      amount: "---",
       image: mouse,
     },
   ];
@@ -122,136 +119,155 @@ const SalesRecord = () => {
     
     border-radius: 8px;
      padding: 0px 20px; */}
-      <div style={{background:"#FFFFFF" , borderRadius:"8px", padding:"0px 20px",paddingBottom:"2px"}} >
-            <div className="dashboard-metricss">
-            <div >
-              <h3>Sales Record</h3>
-            </div>
-            <div className="toolbar-actions">
-              <button className="btn btn-primary">+ Create Sales</button>
-            </div>
-            </div>
-           
- <div style={{ margin: '10px 0', fontFamily: 'Arial, sans-serif' }}>
-  <label
-    style={{
-      display: 'block',
-      marginBottom: '5px',
-      color: '#333',
-    }}
-  >
-    Customer Name or Mobile No.
-  </label>
-  <select
-    name="category"
-    style={{
-      width: '100%',
-      padding: '8px 12px',
-      fontSize: '14px',
-      border: '1px solid #ccc',
-      borderRadius: '4px',
-      backgroundColor: '#f8f9fa',
-      cursor: 'pointer',
-    }}
-  >
-    <option>Select a product category</option>
-  </select>
-</div>
-         
-       
-      </div>
-      {/* Toolbar */}
-      <div className="overview">
-        <div>
-          
-
-          <div className="toolbar-actions-ths" style={{border: '1px solid #ccc',borderRadius: '6px',  padding: '4px 11px',}}>
-            <div className="toolbar-titles">
-              <button className="toolbar-filter-btn">All</button>
-            </div>
-
-            <div className="toolbar-action" style={{ marginTop: "4px" }}>
-              <button className="icon-btn ">
-                <IoSearch />
-              </button>
-              <button className="icon-btn">
-                <CgSortAz />
-              </button>
-              <button className="icon-btn">
-                <TbArrowsSort />
-              </button>
-            </div>
+      <div style={{ background: "#FFFFFF", borderRadius: "8px", padding: "0px 20px", paddingBottom: "2px" }} >
+        <div className="dashboard-metricss">
+          <div >
+            <h3>Sales Record</h3>
+          </div>
+          <div className="toolbar-actions">
+            <button className="btn btn-primary">+ Create Sales</button>
           </div>
         </div>
 
-        {/* Product Table */}
-        <div>
-          <table className="product-table">
-            <thead>
-              <tr style={{ color: "#676767" }}>
-                <th>
-                  <input type="checkbox" />
-                </th>
-                <th>Customer</th>
-                <th>Due Date</th>
-                <th>Status</th>
-                <th>Amount</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {paginatedData.map((sales, index) => (
-                <tr key={index}>
-                  <td>
-                    <input type="checkbox" />
-                  </td>
-                  <td>
-                    <img
-                      src={sales.image}
-                      alt={sales.name}
-                      className="product-img"
-                    />
-                    {sales.customer}
-                  </td>
-                  <td>{sales.date} </td>
-                  <td>
-                    <span className={`status ${sales.status.toLowerCase()}`}>
-                      {sales.status}
-                    </span>
-                  </td>
-                  <td>{sales.amount}</td>
-                  <td>
-                    <BsThreeDots />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div style={{ margin: '10px 0', fontFamily: 'Arial, sans-serif' }}>
+          <label
+            style={{
+              display: 'block',
+              marginBottom: '5px',
+              color: '#333',
+            }}
+          >
+            Customer Name or Mobile No.
+          </label>
+          <select
+            name="category"
+            style={{
+              width: '100%',
+              padding: '8px 12px',
+              fontSize: '14px',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              backgroundColor: '#f8f9fa',
+              cursor: 'pointer',
+            }}
+          >
+            <option>Select Customer</option>
+          </select>
+        </div>
 
-          <div className="pagination">
-            <div className="pagination-boxx">{itemsPerPage} per page</div>
-            <div className="pagination-boxx pagination-info">
-              <span>
-                {startIndex + 1}-{Math.min(endIndex, totalItems)} of{" "}
-                {totalItems}
-              </span>
-              <span style={{ color: "grey" }}> | </span>
-              <button
-                disabled={currentPage === 1}
-                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                className="pagination-arrow"
-              >
-                <FaAngleLeft />
-              </button>
-              <button
-                disabled={currentPage === totalPages}
-                onClick={() =>
-                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                }
-                className="pagination-arrow"
-              >
-                <FaChevronRight />
-              </button>
+
+      </div>
+      {/* Toolbar */}
+      <div
+      // style={{ padding: "5px 5px", backgroundColor: "blue" }}
+      >
+        <div className="overview">
+          <div>
+
+
+            <div className="toolbar-actions-ths" style={{ border: '1px solid #ccc', borderRadius: '6px', padding: '4px 11px', }}>
+              <div className="toolbar-titles">
+                <button className="toolbar-filter-btn">All</button>
+                <button className="btn btn-light">Recents</button>
+                <button className="btn btn-light">Paid</button>
+                <button className="btn btn-light">Due</button>
+                <button className="btn btn-light"><FaPlus /></button>
+
+              </div>
+
+              <div className="toolbar-action" style={{ marginTop: "4px" }}>
+                <button className="icon-btn ">
+                  <IoSearch />
+                </button>
+                <button className="icon-btn">
+                  <CgSortAz />
+                </button>
+                <button className="icon-btn">
+                  <TbArrowsSort />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Product Table */}
+          <div >
+
+            <table className="product-table" >
+              <thead >
+                <tr style={{ background: "#F1F1F1", color: "#676767" }}>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th>Sold Items</th>
+                  <th>Customer</th>
+                  <th>Total Amount</th>
+                  <th>Status</th>
+                  <th>Due Amount</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody >
+                {paginatedData.map((sales, index) => (
+                  <tr key={index}>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                        <img
+                          src={sales.image}
+                          alt={sales.name}
+                          className="product-img"
+                        />
+                        <span >{sales.soldItems}</span>
+                      </div>
+
+                    </td>
+
+                    <td>{sales.customer} </td>
+                    <td>
+                      {sales.total}
+                    </td>
+                    <td>
+                      <span className={`status ${sales.status.toLowerCase()}`}>
+                        {sales.status}
+                      </span>
+                    </td>
+                    <td>{sales.amount}</td>
+                    <td>
+                      <BsThreeDots />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+
+            <div className="pagination">
+              <div className="pagination-boxx">{itemsPerPage} per page</div>
+              <div className="pagination-boxx pagination-info">
+                <span>
+                  {startIndex + 1}-{Math.min(endIndex, totalItems)} of{" "}
+                  {totalItems}
+                </span>
+                <span style={{ color: "grey" }}> | </span>
+                <button
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                  className="pagination-arrow"
+                >
+                  <FaAngleLeft />
+                </button>
+                <button
+                  disabled={currentPage === totalPages}
+                  onClick={() =>
+                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                  }
+                  className="pagination-arrow"
+                >
+                  <FaChevronRight />
+                </button>
+              </div>
             </div>
           </div>
         </div>
