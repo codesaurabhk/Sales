@@ -22,7 +22,7 @@ import bag from "../images/bag.jpg";
 
 const SalesRecord = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 8;
 
   const data = [
     {
