@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./CreateInvoices.css";
+import "./CreateQuatations.css";
 import { IoIosArrowForward, IoMdSearch } from "react-icons/io";
 import { AiFillProduct } from "react-icons/ai";
 import ReactQuill from "react-quill";
@@ -10,7 +10,7 @@ import { TbArrowsSort } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { BiBarcodeReader } from "react-icons/bi";
 
-function CreateInvoices() {
+function CreateQuatations() {
   const [value, setValue] = useState("");
   const inputRef = useRef(null);
   const [fileName, setFileName] = useState("");
@@ -75,14 +75,14 @@ function CreateInvoices() {
   return (
     <div className="ac-containers">
       {/* path */}
-      <div className="ac-paths">
+      <div className="ac-path">
         <span className="gray-color">
-          Sales</span>
+          Sales
           <span>
             <IoIosArrowForward />
           </span>
-        
-        <span className="ac-name">Create Invoices</span>
+        </span>
+        <span className="ac-name">Create Quotations</span>
       </div>
 
       <div className="ac-details">
@@ -94,43 +94,7 @@ function CreateInvoices() {
             marginTop: "15px",
           }}
         >
-          Invoice No :- <span style={{ color: "#676767" }}>123789</span>
-        </div>
-        <div style={{ display: "flex", gap: "2%" }}>
-          <div style={{ marginTop: "13px", width: "48%" }}>
-            <span>Invoice Nos.</span>
-            <br />
-            <input
-              type="number"
-              style={{
-                width: "95%",
-                padding: "8px",
-                borderRadius: "4px",
-                border: "1px solid #C2C2C2",
-                fontSize: "16px",
-                marginTop: "5px",
-                backgroundColor: "#FBFBFB",
-                color: "#C2C2C2",
-              }}
-            />
-          </div>
-          <div style={{ marginTop: "13px", width: "48%" }}>
-            <span>Due Date</span>
-            <br />
-            <input
-              type="date"
-              style={{
-                width: "95%",
-                padding: "8px",
-                borderRadius: "4px",
-                border: "1px solid #C2C2C2",
-                fontSize: "16px",
-                marginTop: "5px",
-                backgroundColor: "#FBFBFB",
-                color: "#C2C2C2",
-              }}
-            />
-          </div>
+          Quotation No :- <span style={{ color: "#676767" }}>123789</span>
         </div>
         <div style={{ display: "flex", gap: "3%" }}>
           <div style={{ marginTop: "16px", width: "100%" }}>
@@ -148,7 +112,7 @@ function CreateInvoices() {
                 color: "#C2C2C2",
               }}
             >
-              <option value="" style={{ color: "#C2C2C2" }}>
+              <option value="" style={{ color: "#a09f9fff" }}>
                 Select customer
               </option>
               <option value="chair" style={{ color: "#C2C2C2" }}>
@@ -157,6 +121,43 @@ function CreateInvoices() {
             </select>
           </div>
         </div>
+        <div style={{ display: "flex", gap: "2%" }}>
+          <div style={{ marginTop: "13px", width: "48%" }}>
+            <span>Quotation Date</span>
+            <br />
+            <input
+              type="Date"
+              style={{
+                width: "95%",
+                padding: "8px",
+                borderRadius: "4px",
+                border: "1px solid #C2C2C2",
+                fontSize: "16px",
+                marginTop: "5px",
+                backgroundColor: "#FBFBFB",
+                color: "#C2C2C2",
+              }}
+            />
+          </div>
+          <div style={{ marginTop: "13px", width: "48%" }}>
+            <span>Valid Until</span>
+            <br />
+            <input
+              type="date"
+              style={{
+                width: "95%",
+                padding: "8px",
+                borderRadius: "4px",
+                border: "1px solid #C2C2C2",
+                fontSize: "16px",
+                marginTop: "5px",
+                backgroundColor: "#FBFBFB",
+                color: "#C2C2C2",
+              }}
+            />
+          </div>
+        </div>
+        
       </div>
 
       <div className="ac-details">
@@ -372,13 +373,13 @@ function CreateInvoices() {
                 borderRadius: "4px",
                 border: "1px solid #C2C2C2",
                 background: "#FBFBFB",
-                color:"#626060ff"}} placeholder="None              %" />
+                color:"#626060ff"}} placeholder="00                  %" />
                 <input type="number" style={{ width: "110px",
                 padding: "7px",
                 borderRadius: "4px",
                 border: "1px solid #C2C2C2",
                 background: "#FBFBFB",
-                color:"#626060ff"}} placeholder="None               ₹ " />
+                color:"#626060ff"}} placeholder="00                   ₹ " />
                
             </span>
             
@@ -395,8 +396,8 @@ function CreateInvoices() {
               borderTop: "1px solid #C2C2C2",
             }}
           >
-            <input type="checkbox"  style={{ accentColor: '#d5e7f3ff', color:"blue" }} />
-            <span style={{ color: "#1368EC" }}>
+            <input type="checkbox"  />
+            <span >
               Any shipping charges for this order?
             </span>
             <span style={{ marginLeft: "auto" }}>₹ 200.00</span>
@@ -476,7 +477,7 @@ function CreateInvoices() {
           }}
         >
           Preview
-        </button>{" "}
+        </button>
         {/* new preview button */}
         <button
           style={{
@@ -486,7 +487,9 @@ function CreateInvoices() {
             backgroundColor: "black",
             color: "white",
             cursor: "pointer",
+            boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.3)"
           }}
+          
         >
           Save
         </button>
@@ -495,4 +498,4 @@ function CreateInvoices() {
   );
 }
 
-export default CreateInvoices;
+export default CreateQuatations;

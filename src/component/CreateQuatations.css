@@ -9,12 +9,11 @@
     color: #828486;
 }
 
-.ac-paths {
+.ac-path {
     display: flex;
     align-items: center;
     font-size: large;
     margin-left: 5px;
-    text-align: center;
 }
 
 .ac-name {
