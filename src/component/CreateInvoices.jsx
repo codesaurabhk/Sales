@@ -97,11 +97,11 @@ function CreateInvoices() {
           Invoice No :- <span style={{ color: "#676767" }}>123789</span>
         </div>
         <div style={{ display: "flex", gap: "2%" }}>
-          <div style={{ marginTop: "13px", width: "48%" }}>
-            <span>Invoice Nos.</span>
+          <div style={{ marginTop: "13px", width: "49%" }}>
+            <span>Invoice Date</span>
             <br />
             <input
-              type="number"
+              type="date"
               style={{
                 width: "95%",
                 padding: "8px",
@@ -110,7 +110,7 @@ function CreateInvoices() {
                 fontSize: "16px",
                 marginTop: "5px",
                 backgroundColor: "#FBFBFB",
-                color: "#C2C2C2",
+                color: "#757474ff",
               }}
             />
           </div>
@@ -145,7 +145,7 @@ function CreateInvoices() {
                 fontSize: "16px",
                 marginTop: "5px",
                 backgroundColor: "#FBFBFB",
-                color: "#C2C2C2",
+                color: "#717070ff",
               }}
             >
               <option value="" style={{ color: "#C2C2C2" }}>
@@ -461,6 +461,7 @@ function CreateInvoices() {
             backgroundColor: "#FFFFFF",
             color: "#333",
             cursor: "pointer",
+              boxShadow:"0px 0px 5px rgba(0, 0, 0, 0.3)"
           }}
         >
           Draft
@@ -473,6 +474,7 @@ function CreateInvoices() {
             backgroundColor: "#FFFFFF",
             color: "#333",
             cursor: "pointer",
+            boxShadow:"0px 0px 5px rgba(0, 0, 0, 0.3)"
           }}
         >
           Preview
@@ -486,6 +488,7 @@ function CreateInvoices() {
             backgroundColor: "black",
             color: "white",
             cursor: "pointer",
+              boxShadow:"0px 0px 5px rgba(0, 0, 0, 0.3)"
           }}
         >
           Save

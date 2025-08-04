@@ -14,7 +14,7 @@ function App() {
       {/* <SalesRecord/> */}
       {/* <Invoices/> */}
       {/* <Quotation/> */}
-      <CreateInvoices />
+      {/* <CreateInvoices /> */}
       {/* <CreateQuatations/> */}
     </>
   )

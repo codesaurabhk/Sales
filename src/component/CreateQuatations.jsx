@@ -122,7 +122,7 @@ function CreateQuatations() {
           </div>
         </div>
         <div style={{ display: "flex", gap: "2%" }}>
-          <div style={{ marginTop: "13px", width: "48%" }}>
+          <div style={{ marginTop: "13px", width: "49%" }}>
             <span>Quotation Date</span>
             <br />
             <input
@@ -462,6 +462,7 @@ function CreateQuatations() {
             backgroundColor: "#FFFFFF",
             color: "#333",
             cursor: "pointer",
+              boxShadow:"0px 0px 5px rgba(0, 0, 0, 0.3)"
           }}
         >
           Draft
@@ -474,6 +475,7 @@ function CreateQuatations() {
             backgroundColor: "#FFFFFF",
             color: "#333",
             cursor: "pointer",
+              boxShadow:"0px 0px 5px rgba(0, 0, 0, 0.3)"
           }}
         >
           Preview
@@ -487,7 +489,7 @@ function CreateQuatations() {
             backgroundColor: "black",
             color: "white",
             cursor: "pointer",
-            boxShadow:"5px 5px 10px rgba(0, 0, 0, 0.3)"
+            boxShadow:"0px 0px 5px rgba(0, 0, 0, 0.3)"
           }}
           
         >
