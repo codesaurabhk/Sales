@@ -1,6 +1,7 @@
 import './App.css'
 import CreateInvoices from './component/CreateInvoices'
 import CreateQuatations from './component/CreateQuatations'
+import CreateSales from './component/CreateSales'
 import Invoices from './component/Invoices'
 import Quotation from './component/Quotation'
 import SalesRecord from './component/SalesRecord'
@@ -16,6 +17,7 @@ function App() {
       {/* <Quotation/> */}
       {/* <CreateInvoices /> */}
       {/* <CreateQuatations/> */}
+      <CreateSales/>
     </>
   )
 }
