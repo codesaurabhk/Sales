@@ -73,7 +73,7 @@ function CreateSales() {
       
       <div className="ac-path">
         <span className="gray-color">Sales</span>
-        <span>
+        <span style={{marginTop:"5px"}}>
           <IoIosArrowForward />
         </span>
 
