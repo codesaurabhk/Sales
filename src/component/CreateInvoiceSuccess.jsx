@@ -1,196 +1,8 @@
-// import React from 'react'
-// import "./CreateInvoiceSuccess.css";
-// import { IoIosArrowForward } from 'react-icons/io';
-
-// const CreateInvoiceSuccess = () => {
-
-//     const styles = {
-//     container: {
-//       maxWidth: "800px",
-//       margin: "auto",
-//       padding: "40px",
-//       border: "1px solid #ccc",
-//       fontFamily: "Arial, sans-serif",
-//       fontSize: "14px",
-//       color: "#333",
-//       backgroundColor: "#fff",
-//     },
-//     header: {
-//       textAlign: "right",
-//       fontSize: "35px",
-//       letterSpacing: "4px",
-//       fontWeight: "300",
-//         // borderLeft: "1px solid #ccc",
-
-//     },
-//     section: {
-//       marginBottom: "20px",
-//     },
-//     label: {
-//       fontWeight: "bold",
-//     },
-//     rowBetween: {
-//       display: "flex",
-//       justifyContent: "space-between",
-//     },
-//     table: {
-//       width: "100%",
-//       borderCollapse: "collapse",
-//       marginTop: "20px",
-//     },
-//     thtd: {
-//     //   borderBottom: "1px solid #ccc",
-//       padding: "8px",
-//       textAlign: "left",
-//     },
-//     rightAlign: {
-//       textAlign: "right",
-//     },
-//     totalSection: {
-//       marginTop: "20px",
-//     },
-//     footer: {
-//       marginTop: "40px",
-//       fontSize: "13px",
-//       textAlign: "center",
-//       color: "#666",
-//     },
-//     btns: {
-//       marginTop: "20px",
-//       display: "flex",
-//       gap: "10px",
-//       justifyContent: "center",
-//     },
-//     btn: {
-//       padding: "6px 16px",
-//       border: "1px solid #aaa",
-//       background: "#f2f2f2",
-//       borderRadius: "4px",
-//       cursor: "pointer",
-//     },
-//   };
-//   return (
-//     <div className="ac-containers">
-//         <div className="ac-path">
-//                 <span className="gray-color">Sales</span>
-//                 <span style={{marginTop:"5px"}}>
-//                   <IoIosArrowForward />
-//                 </span>
-
-//                 <span className="ac-name">Create Sales Order</span>
-//               </div>
-
-//               <div style={styles.container}>
-//       <div style={styles.header}>INVOICE</div>
-
-//       <div style={{ ...styles.section, ...styles.rowBetween }}>
-//         <div>
-//           <div><span style={styles.label}>INVOICE NO:</span> 01234</div>
-//           <div><span style={styles.label}>DATE:</span> 11.02.2025</div>
-//         </div>
-//         <div><span style={styles.label}>DUE DATE:</span> 11.03.2025</div>
-//       </div>
-
-//       <div style={styles.section}>
-//         <div style={styles.label}>ISSUED FROM:</div>
-//         <div>Your Company Name</div>
-//         <div>123 Anywhere St., Any City</div>
-//         <div>Email - companyxyz@gmail.com, Phone - +91-XXXXXXXXXX</div>
-//         <div>GSTIN - 27XXXXXXXXX125</div>
-//       </div>
-
-//       <div style={styles.section}>
-//         <div style={styles.label}>ISSUED TO:</div>
-//         <div>Client Name</div>
-//         <div>456 Client Street, Commercial Zone, City, PIN - 111111</div>
-//         <div>Email - companyxyz@gmail.com, Phone - +91-XXXXXXXXXX</div>
-//       </div>
-
-//       <table style={styles.table}>
-//         <thead>
-//           <tr>
-//             <th style={styles.thtd}>DESCRIPTION</th>
-//             <th style={styles.thtd}>UNIT PRICE</th>
-//             <th style={styles.thtd}>QTY</th>
-//             <th style={styles.thtd}>TOTAL</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           <tr>
-//             <td style={styles.thtd}>Wheel Chair</td>
-//             <td style={styles.thtd}>₹5000</td>
-//             <td style={styles.thtd}>1</td>
-//             <td style={styles.thtd}>₹5000</td>
-//           </tr>
-//           <tr>
-//             <td style={styles.thtd}>Luxury Bag</td>
-//             <td style={styles.thtd}>₹735</td>
-//             <td style={styles.thtd}>2</td>
-//             <td style={styles.thtd}>₹1470</td>
-//           </tr>
-//           <tr>
-//             <td style={styles.thtd}>Gaming Mouse</td>
-//             <td style={styles.thtd}>₹690</td>
-//             <td style={styles.thtd}>1</td>
-//             <td style={styles.thtd}>₹690</td>
-//           </tr>
-//         </tbody>
-//       </table>
-
-//       <div style={styles.totalSection}>
-//         <div style={styles.rowBetween}>
-//           <div><strong>SUBTOTAL</strong></div>
-//           <div>₹7160</div>
-//         </div>
-//         <div style={styles.rowBetween}>
-//           <div>Tax +18%</div>
-//           <div>₹1288.8</div>
-//         </div>
-//         <div style={styles.rowBetween}>
-//           <div>Shipping Charges</div>
-//           <div>₹200</div>
-//         </div>
-//         <div style={styles.rowBetween}>
-//           <div><strong>Subtotal with Tax</strong></div>
-//           <div>₹8648.8</div>
-//         </div>
-//         <div style={styles.rowBetween}>
-//           <div>Discount -10%</div>
-//           <div>-₹864.88</div>
-//         </div>
-//         <div style={{ ...styles.rowBetween, fontWeight: "bold", fontSize: "16px", marginTop: "10px" }}>
-//           <div>TOTAL</div>
-//           <div>₹7783.92</div>
-//         </div>
-//       </div>
-
-//       <div style={{ marginTop: "30px" }}>
-//         <div style={styles.label}>PAY TO:</div>
-//         <div>ICICI Bank</div>
-//         <div>Account Name: Account Holder Name</div>
-//         <div>Account No.: 0123 4567 8901</div>
-//         <div>IFSC - ICIC0001234</div>
-//       </div>
-
-//       <div style={styles.footer}>
-//         This is a computer-generated invoice and does not require a physical signature.
-//       </div>
-
-//       <div style={styles.btns}>
-//         <button style={styles.btn}>Email</button>
-//         <button style={styles.btn}>PDF</button>
-//         <button style={styles.btn}>Print</button>
-//       </div>
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default CreateInvoiceSuccess
 
 import React from "react";
 import "./CreateInvoiceSuccess.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { GiPartyPopper } from "react-icons/gi";
 
 const CreateInvoiceSuccess = () => {
   return (
@@ -205,14 +17,13 @@ const CreateInvoiceSuccess = () => {
       <div
         style={{
           marginTop: "20px",
-          marginBottom: "30px",
+          marginBottom: "25px",
           width: "40%",
           minWidth: "750px",
           border: "1px solid #007B42",
           backgroundColor: "#BAFFDF",
           borderRadius: "4px",
           padding: "7px 8px",
-          // maxWidth: "930px",
           margin: "auto",
         }}
       >
