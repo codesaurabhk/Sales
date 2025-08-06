@@ -16,15 +16,14 @@ const CreateInvoiceSuccess = () => {
       </div>
       <div
         style={{
-          marginTop: "20px",
-          marginBottom: "25px",
+        margin: "auto auto 25px",
           width: "40%",
           minWidth: "750px",
           border: "1px solid #007B42",
           backgroundColor: "#BAFFDF",
           borderRadius: "4px",
           padding: "7px 8px",
-          margin: "auto",
+        
         }}
       >
         <span>🎉 You have successfully created a Invoice.</span>

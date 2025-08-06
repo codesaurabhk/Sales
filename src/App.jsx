@@ -20,8 +20,8 @@ function App() {
       {/* <CreateInvoices /> */}
       {/* <CreateQuatations/> */}
       {/* <CreateSales/> */}
-      {/* <CreateInvoiceSuccess/> */}
-      <CreateQuatationsSuccess/>
+      <CreateInvoiceSuccess/>
+      {/* <CreateQuatationsSuccess/> */}
     </>
   )
 }
