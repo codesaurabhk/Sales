@@ -1,10 +1,10 @@
 
 import React from "react";
-import "./CreateInvoiceSuccess.css";
+import "./CreateQuatationsSuccess.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { GiPartyPopper } from "react-icons/gi";
 
-const CreateInvoiceSuccess = () => {
+const CreateQuatationsSuccess = () => {
   return (
     <div className="ac-containerss">
       <div className="ac-path">
@@ -12,7 +12,7 @@ const CreateInvoiceSuccess = () => {
         <span className="arrow-icon">
           <IoIosArrowForward />
         </span>
-        <span className="ac-name">Create Invoice</span>
+        <span className="ac-name">Create Quotations</span>
       </div>
       <div
         style={{
@@ -27,7 +27,7 @@ const CreateInvoiceSuccess = () => {
           margin: "auto",
         }}
       >
-        <span>🎉 You have successfully created a Invoice.</span>
+        <span>🎉 You have successfully created a Quotation.</span>
       </div>
 
       <div
@@ -51,13 +51,13 @@ const CreateInvoiceSuccess = () => {
             <div style={{ width: "70%", marginTop: "22px" }}>
               <hr />
             </div>
-            <div className="invoice-header">INVOICE</div>
+            <div className="invoice-header">QUOTATION</div>
           </div>
 
           <div className="section ">
             <div>
               <div>
-                <span className="label">INVOICE NO:</span> 01234
+                <span className="label">INVOICE NO: 01234</span> 
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 
@@ -155,20 +155,21 @@ const CreateInvoiceSuccess = () => {
               style={{ borderTop: "2px solid #abababff", paddingTop: "5px" }}
             >
               <div>TOTAL</div>
-              <div>₹7783.92</div>
+              <div>₹7,783.92</div>
             </div>
           </div>
 
           <div className="payment-info">
-            <div className="label">PAY TO:</div>
-            <div>ICICI Bank</div>
-            <div>Account Name: Account Holder Name</div>
-            <div>Account No.: 0123 4567 8901</div>
-            <div>IFSC - ICIC0001234</div>
+            <div className="label">ADDITIONAL DETAILS:</div>
+            <div>- Validity: This Quotation is valid for 15 days.</div>
+            <div>- Delivery time: Within 5-7 business days after conformatation.</div>
+            <div>- Payment Terms: 50% advance, balance upon delivery.</div>
+            <div>- Mode of Delivery: Courier / Direct Dispatch</div>
+            <div>- Warranty: 1-year service warranty on applicable items</div>
           </div>
 
           <div className="invoice-footer">
-            This is a computer-generated invoice and does not require a physical
+            This is a computer-generated quotation and does not require a physical
             signature.
           </div>
         </div>
@@ -182,4 +183,4 @@ const CreateInvoiceSuccess = () => {
   );
 };
 
-export default CreateInvoiceSuccess;
+export default CreateQuatationsSuccess;
